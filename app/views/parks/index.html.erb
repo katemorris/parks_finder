@@ -1,0 +1,16 @@
+<h1>Parks in <%= @state %></h1>
+<p>Total Parks: <%= @parks.count %></p>
+<% @parks.each do |park| %>
+  <div id="<%= park.code %>">
+    <h2><%= park.name %></h2>
+    <p><%= park.description %></p>
+    <%= link_to 'Directions', "#{park.directions_url}" %>
+    <h3>Hours</h3>
+    <ul>
+      <% park.hours.each do |day, hours| %>
+        <li><%= day %>: <%= hours %></li>
+      <% end %>
+    </ul>
+  </div>
+  <hr>
+<% end %>
