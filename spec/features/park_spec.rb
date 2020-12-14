@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Park, type: :model do
+RSpec.describe Park do
   let(:park) do
     Park.new(
       :id=>"2ED6E071-57AA-4B08-8DDA-5CB09FBB75C8",
@@ -27,7 +27,7 @@ RSpec.describe Park, type: :model do
         :name=>"Andrew Johnson National Historic Site"}]
     )
   end
-  
+
   describe 'attribute accessors' do
     it 'has attributes' do
       description = "Andrew Johnson's complex presidency (1865-69) illustrates the Constitution at work following the Civil War. As the President and Congress disagreed on Reconstruction methods, the Constitution served as their guide on balance of powers, vetoes, and impeachment. In the end, it evolved as a living document with pivotal amendments on freedom, citizenship, and voting rights - topics still vital today."
